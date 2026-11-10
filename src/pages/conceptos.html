@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulador de Elevador</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="../styles/elevator.css" />
+  </head>
+  <body>
+    <!-- Navbar ajustada a la parte superior -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark-custom w-100 border-bottom border-secondary-subtle"
+    >
+      <a class="navbar-brand text-info fw-bold" href="index.html">Simulador</a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="conceptos.html"
+              >Conceptos</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="videos.html">Videos</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container py-4">
+      <!-- Fila 1: Las dos primeras tarjetas (cada una ocupa una columna de 6) -->
+      <div class="row g-4 mb-4">
+        <div class="col-12 col-md-12 col-lg-6">
+          <article class="card concept-card h-100 shadow-sm border-0">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9rWiveCcOlCg8WhwJIfo-uPfT8WIFronXPP-dvwA9Ug&s=10"
+              class="card-img-top"
+              alt="Leyes de Newton"
+            />
+            <div class="card-body d-flex flex-column">
+              <h4 class="card-title text-info fw-bold">Leyes de Newton</h4>
+              <p class="card-text text-secondary flex-grow-1">
+                Son tres principios fundamentales formulados por el físico y
+                matemático inglés Isaac Newton en 1687 en su obra
+                <em>Philosophiae Naturalis Principia Mathematica</em>. Explican
+                la relación entre las fuerzas y el movimiento.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-6">
+          <article class="card concept-card h-100 shadow-sm border-0">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRK6_xX5j762zUGhqizUsLvFV8o4vWJ1h4EEgJmMQXSTgcTSJMDEu7SkLy&s=10"
+              class="card-img-top"
+              alt="Segunda ley de Newton"
+            />
+            <div class="card-body d-flex flex-column">
+              <h4 class="card-title text-info fw-bold">
+                Segunda ley de Newton
+              </h4>
+              <p class="card-text text-secondary flex-grow-1">
+                Establece que la aceleración que adquiere un cuerpo es
+                directamente proporcional a la fuerza neta que actúa sobre él e
+                inversamente proporcional a su masa.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Fila 2: El resto de las tarjetas (organizadas de 3 en 3 con col-lg-4) -->
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card concept-card h-100 shadow-sm border-0">
+            <img
+              src="https://i.pinimg.com/474x/76/20/15/762015cf62c7f54f365650395b6194b9.jpg?nii=t"
+              class="card-img-top"
+              alt="Concepto de Masa"
+            />
+            <div class="card-body d-flex flex-column">
+              <h4 class="card-title text-info fw-bold">Masa</h4>
+              <p class="card-text text-secondary flex-grow-1">
+                La masa es la medida cuantitativa de la inercia, una propiedad
+                fundamental de la materia.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card concept-card h-100 shadow-sm border-0">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHAD5PLyQ2lLBZ9DhquFThfXMoEGnThTLSWumWIUAV1A&s=10"
+              class="card-img-top"
+              alt="Concepto de Aceleración"
+            />
+            <div class="card-body d-flex flex-column">
+              <h4 class="card-title text-info fw-bold">Magnitud</h4>
+              <p class="card-text text-secondary flex-grow-1">
+                Es cualquier propiedad o atributo de un sistema físico que se
+                puede medir y expresar mediante un número y una unidad.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card concept-card h-100 shadow-sm border-0">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8wnGgq_aoKpl5ZHiHYhSLm-eXSCQF62oNY3sjqZuW6dPDsqLQUNFizsr-&s=10"
+              class="card-img-top"
+              alt="Tensión y Peso"
+            />
+            <div class="card-body d-flex flex-column">
+              <h4 class="card-title text-info fw-bold">Aceleracion</h4>
+              <p class="card-text text-secondary flex-grow-1">
+                Es la magnitud vectorial que mide la rapidez con la que cambia
+                la velocidad de un objeto (en su rapidez o en su dirección) a lo
+                largo del tiempo.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

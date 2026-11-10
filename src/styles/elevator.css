@@ -1,0 +1,288 @@
+:root {
+  --metal-claro: #d4d4d8;
+  --metal-medio: #a1a1aa;
+  --metal-oscuro: #52525b;
+  --eje-fondo: #18181b;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f172a;
+  color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+}
+
+.bg-dark-custom {
+  background-color: rgba(15, 23, 42, 0.95);
+}
+
+.contenedor-principal {
+  max-width: 850px;
+  background: rgba(30, 41, 59, 0.8) !important;
+  border: 1px solid #334155 !important;
+  border-radius: 16px !important;
+  backdrop-filter: blur(10px);
+}
+
+/* Estilos de inputs personalizados para Bootstrap */
+.form-control:focus {
+  background-color: #1e293b;
+  color: #f8fafc;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 0.25rem rgba(56, 189, 248, 0.25);
+}
+
+.form-check-input:checked {
+  background-color: #0284c7;
+  border-color: #0284c7;
+}
+
+/* Diseño del Eje del Elevador (Shaft) */
+.eje {
+  width: 160px;
+  height: 520px;
+  background: var(--eje-fondo);
+  border: 4px solid #334155;
+  border-radius: 4px;
+  position: relative;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Guías laterales */
+.eje::before,
+.eje::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 100%;
+  background: linear-gradient(to right, #27272a, #3f3f46, #27272a);
+  top: 0;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.8);
+}
+.eje::before {
+  left: 10px;
+}
+.eje::after {
+  right: 10px;
+}
+
+/* Diseño del Cable */
+.cable {
+  width: 6px;
+  background: repeating-linear-gradient(
+    -45deg,
+    #52525b,
+    #52525b 2px,
+    #3f3f46 2px,
+    #3f3f46 4px
+  );
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+/* Diseño de la Cabina */
+.cabina {
+  width: 110px;
+  height: 140px;
+  background: linear-gradient(
+    135deg,
+    var(--metal-claro) 0%,
+    var(--metal-medio) 50%,
+    var(--metal-oscuro) 100%
+  );
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4px;
+  box-shadow:
+    inset 0 0 10px rgba(255, 255, 255, 0.5),
+    0 15px 25px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+}
+
+/* Puertas de la cabina */
+.puerta-izq,
+.puerta-der {
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, #e4e4e7, #a1a1aa);
+  border: 1px solid #71717a;
+  box-sizing: border-box;
+}
+.puerta-der {
+  background: linear-gradient(to left, #e4e4e7, #a1a1aa);
+}
+
+/* Detalles de la cabina (techo y base) */
+.cabina::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  width: 100%;
+  height: 8px;
+  background: #27272a;
+  border-radius: 0 0 4px 4px;
+}
+.cabina::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 10px;
+  background: #3f3f46;
+  border-radius: 4px 4px 0 0;
+}
+
+/* Pantalla de Resultados */
+.pantalla-resultados {
+  background: #0f172a;
+  padding: 15px;
+  border-radius: 6px;
+  border-left: 4px solid #38bdf8;
+  min-height: 120px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #34d399;
+  text-shadow: 0 0 5px rgba(52, 211, 153, 0.3);
+}
+
+.valor-critico {
+  color: #f43f5e;
+}
+
+.container-fluid {
+  display: grid;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center center; /* Centra verticalmente */
+  height: 100vh;
+}
+
+/* Estilos para las Tarjetas de Conceptos */
+.concept-card {
+  background-color: rgba(30, 41, 59, 0.8) !important;
+  border: 1px solid #334155 !important;
+  border-radius: 12px !important;
+  backdrop-filter: blur(8px);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.concept-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.5) !important;
+  border-color: #38bdf8 !important;
+}
+
+.concept-card .card-img-top {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  height: 180px;
+  object-fit: cover;
+  background-color: #1e293b;
+}
+
+.concept-card .card-title {
+  color: #38bdf8;
+  font-weight: bold;
+}
+
+.concept-card .card-text {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.concept-card .btn-primary {
+  background-color: #0284c7;
+  border: none;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.concept-card .btn-primary:hover {
+  background-color: #0369a1;
+}
+
+/*///////////////////Seccion de conceptos y videos///////////////////////////////////*/
+
+/* Estilos mejorados para las Tarjetas de Conceptos */
+.concept-card {
+  background-color: rgba(30, 41, 59, 0.8) !important;
+  border: 1px solid #334155 !important;
+  border-radius: 12px !important;
+  backdrop-filter: blur(8px);
+  cursor: pointer; /* Cambia el cursor a la mano al pasar por encima */
+  overflow: hidden; /* Asegura que el zoom de la imagen no se desborde de la tarjeta */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Efecto al pasar el cursor (Hover avanzado) */
+.concept-card:hover {
+  transform: translateY(-6px); /* Eleva un poco más la tarjeta */
+  border-color: #38bdf8 !important; /* Ilumina el borde con color cian */
+  box-shadow:
+    0 15px 30px -5px rgba(56, 189, 248, 0.25),
+    0 10px 20px -10px rgba(0, 0, 0, 0.7) !important; /* Doble sombra con destello de luz */
+}
+
+/* Efecto de zoom en la imagen al hacer hover sobre la tarjeta */
+.concept-card .card-img-top {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  height: 180px;
+  object-fit: fill;
+  background-color: #1e293b;
+  transition: transform 0.4s ease; /* Transición suave para el zoom */
+}
+
+.concept-card:hover .card-img-top {
+  transform: scale(1.05); /* Hace un zoom leve del 5% en la imagen */
+}
+
+.concept-card .card-title {
+  color: #38bdf8;
+  font-weight: bold;
+}
+
+.concept-card .card-text {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.concept-card .btn-primary {
+  background-color: #0284c7;
+  border: none;
+  font-weight: bold;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.concept-card .btn-primary:hover {
+  background-color: #0369a1;
+  transform: scale(1.02); /* Pequeño impulso en el botón */
+}
+
+nav {
+  margin-left: 15px;
+  margin-right: 10px;
+}
